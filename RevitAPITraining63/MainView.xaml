@@ -1,0 +1,19 @@
+﻿<Window x:Class="RevitAPITraining63.MainView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:RevitAPITraining63"
+             mc:Ignorable="d" 
+             Height="250" Width="400"
+             Title="Создание элементов между двумя точками">
+    <StackPanel>
+        <Label Content="Выбрать тип элементов" Margin="5"/>
+        <ComboBox ItemsSource="{Binding FamilyInstance}" SelectedValue="{Binding SelectedFamilyInstance}" DisplayMemberPath="Name" Margin="5"/>       
+        <Label Content="Введите количество" Margin="5"/>
+        <TextBox Text="{Binding Count}" Margin="5"/>
+        <Button Content="Применить" Command="{Binding SaveCommand}" Margin="5"/>
+    </StackPanel>
+    </Window>
+
+
